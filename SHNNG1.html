@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>SHNNG</title>
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/public1.css">
+	<link rel="stylesheet" type="text/css" href="css/1.css">
+	
+</head>
+<body>
+	<header>
+        <div class="nav">
+          <a href="#" class="logo"><img src="3DANIMATE/logo.png"></a>
+	      <ul id="navbar" class="clearfix">
+	            <li><a href="SHNNG1.html">Home</a></li>
+	            <li><a href="about us.html">ABOUT</a></li>
+	            <li><a href="Drawing.html">Renderings</a></li>
+	            <li><a href="bim.html">BIM</a></li>
+	            <li><a href="3DANIMATE.html">3D Anlmate</a></li>
+	            <li><a href="contect.html">contact</a></li>
+	       </ul>
+	       <a href="javascript:void(0);" id="rightBtn">more</a>
+       </div>
+	</header>	
+	<div class="contenter">			
+		<h2 class="lp">OUR SERVICE</h2>		
+		<div class="picp">
+			<div class="picp1">
+				<div class="pic">
+					<img src="3DANIMATE/gray1.png">
+					<img src="3DANIMATE/color1.png" class="pic-color">
+				</div>
+				<div class="txt">
+					<h3>DIGITAL EFFECT DRAWING</h3>
+					<p>
+						Nosape eaqui non nobitati te ommos deria nos quatur? Pario comnit reris aut modic tecuptat omni ad explanditam verupis nia sequist la et liquo omnia 
+					</p>
+				</div>
+			</div>
+			<div class="picp1">
+				<div class="pic">
+					<img src="3DANIMATE/gray2.png">
+					<img src="3DANIMATE/color2副本.png" class="pic-color">
+				</div>
+				<div class="txt">
+					<h3>Building Information Modeling</h3>
+					<p>
+						Nosape eaqui non nobitati te ommos deria nos quatur? Pario comnit reris aut modic tecuptat omni ad explanditam verupis nia sequist la et liquo omnia 
+					</p>
+				</div>
+			</div>
+			<div class="picp1">
+				<div class="pic">
+					<img src="3DANIMATE/gray3.png">
+					<img src="3DANIMATE/color3.png" class="pic-color">
+				</div>
+				<div class="txt">
+					<h3>3D ANIMATE</h3>
+					<p>
+						Nosape eaqui non nobitati te ommos deria nos quatur? Pario comnit reris aut modic tecuptat omni ad explanditam verupis nia sequist la et liquo omnia 
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>			
+			<h2 class="lp">CONTACT US</h2>			
+		<div class="information">
+			<p>Email:enc@shnng365.com</p>
+			<p>Mobile Phone:86 138 1690 3400</p>
+			<p>Tel:+86 21 6598 6866-304  +86 21 6598 3188-304</p>
+		</div>
+		<div class="over">
+			<p>Copyright © 1998-2015 shining Group</p>
+		</div>
+	</footer>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+			var list =$("#navbar li")
+			for (var i = 0; i < list.length; i++) {
+															
+			list.eq(i).on("mouseover",function(){
+			$(this).toggleClass("active").siblings().removeClass("active")
+			// alert("aaaaaa")
+		})
+		}
+		
+ });
+		// var pic = $(".picp1 img")
+		// // var pic = document.getElementsByTagName(".picp1 img");
+		// var color = ["3DANIMATE/color1.png","3DANIMATE/color2.png","3DANIMATE/color3.png"]
+		// var color1 = ["3DANIMATE/gray1.png","3DANIMATE/gray2.png","3DANIMATE/gray3.png"]
+	
+		// pic.on("mouseenter",function(){
+		// 	var index = $(this).index(".picp1 img");
+		// 	// alert("aaaaaa")
+		// 	$(this).attr("src",color[index]);
+		// 	$(".picp1 .pic").css({borderRight: "20px solid #cfdb00"});
+		// 	$(".picp1 .pic").eq(1).css({borderLeft: "20px solid #cfdb00"})
+		// 	$(".txt").css({
+		// 		color:"#3c3c3c"
+		// 	})
+		// })
+		// pic.on("mouseleave",function(){
+		// 	var index = $(this).index(".picp1 img");
+		// 	$(this).attr("src",color1[index]);
+		// 	$(".picp1 .pic").css({borderRight: "20px solid #e1e1e1"})
+		// 	$(".picp1 .pic").eq(1).css({borderLeft: "20px solid #e1e1e1"})
+		// 	$(".txt").css({
+		// 		color:"#b4b4b4"
+		// 	})
+		// })
+</script>
+</body>
+</html>

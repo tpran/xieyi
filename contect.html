@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>contact</title>
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/public1.css">
+	<style type="text/css">        
+    .contenter {
+        width: 100%;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        background-color: #f5f5f5;
+    }
+        
+            h2.lp {                
+                 margin: 6.6% auto;              
+            }
+            .center {
+                width: 30%;
+                margin:0 auto;
+            }
+            .center img {
+                width: 100%;
+            }
+        .info p{
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+	<header>
+        <div class="nav">
+          <a href="#" class="logo"><img src="3DANIMATE/logo.png"></a>
+          <ul id="navbar" class="clearfix">
+                <li><a href="SHNNG1.html">Home</a></li>
+                <li><a href="about us.html">ABOUT</a></li>
+                <li><a href="Drawing.html">Renderings</a></li>
+                <li><a href="bim.html">BIM</a></li>
+                <li><a href="3DANIMATE.html">3D Anlmate</a></li>
+                <li><a href="contect.html">contact</a></li>
+           </ul>
+           <a href="javascript:void(0);" id="rightBtn">more</a>
+       </div>
+    </header>   
+<div class="contenter">
+        <div class="center">
+            <img src="3DANIMATE/contact.png" class="contact">
+        </div>
+        
+        <h2 class="lp">ABOUT US</h2>
+            
+         <div class="info">
+            <p>Email:enc@shnng365.com</p>
+            <p>Contact：Eric Wang</p>
+            <p>Tel:+86 21 6598 6866-304  +86 21 6598 3188-304</p>
+            <p>Mobile Phone:86 138 1690 3400</p>
+            <p>Address：1-5F, creative center building, No.2, 1147 Lane, Siping Road, Yangpu District, Sha</p>
+            
+        </div>
+</div>
+<footer>
+        
+        <h2 class="lp">CONTACT US</h2>
+            
+        <div class="information">
+            <p>Email:enc@shnng365.com</p>
+            <p>Mobile Phone:86 138 1690 3400</p>
+            <p>Tel:+86 21 6598 6866-304  +86 21 6598 3188-304</p>
+        </div>
+        <div class="over">
+            <p>Copyright © 1998-2015 shining Group</p>
+        </div>
+    </footer>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+            var list =$("#navbar li")
+            for (var i = 0; i < list.length; i++) {
+                                                            
+            list.eq(i).on("mouseover",function(){
+            $(this).toggleClass("active").siblings().removeClass("active")
+            // alert("aaaaaa")
+        })
+        }
+        
+ });
+    </script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>3D Anlmate</title>
+	<style type="text/css">
+		
+        
+.contenter {
+    width: 100%;
+    padding-top: 50px;
+    background-color: #f5f5f5;
+}
+   
+        .movie {
+        	width: 80%;
+        	margin: 75px auto;
+        	position: relative;
+        }
+        	.movie .banner {
+        		width: 100%;
+        	}
+        	.play {
+        		position: absolute;
+        		top: 45%;
+        		left: 48%;
+        		display: none;
+        	}
+        	.movie:hover  .play{
+        		display:block;
+        	}
+
+        .picp1 {
+            width: 80%;
+            height: 268px;
+            padding: 10px 0;
+            margin: 0 auto;
+            border-top: 1px solid #c0c0c0;
+            border-bottom: 1px solid #c0c0c0;
+        }       
+        .picp1 img,.txt {
+            float: left;
+        }
+        .picp1 img {
+            width: 60%;
+            height: 100%;
+        }
+        .txt {
+            width: 35%;
+            margin:15px;
+            float: left;
+        }
+        h1 {
+            font-size: 1.5rem;
+        }
+        p {
+            font-size: 1rem;
+        }
+        .picp2 {
+            border: none;
+        }
+        .picp2  .txt{
+            text-align: right;
+        }
+        .toTop {
+			width: 100%;
+        	text-align: center;
+        	margin-top:50px;
+        }
+	.toTop img {
+        margin: 0 auto;
+       }
+</style>
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/public1.css">
+	<!-- <link rel="stylesheet" type="text/css" href="css/1.css">
+	 -->
+</head>
+<body>
+	<header>
+        <div class="nav">
+          <a href="#" class="logo"><img src="3DANIMATE/logo.png"></a>
+	      <ul id="navbar" class="clearfix">
+	            <li><a href="SHNNG1.html">Home</a></li>
+	            <li><a href="about us.html">ABOUT</a></li>
+	            <li><a href="Drawing.html">Renderings</a></li>
+	            <li><a href="bim.html">BIM</a></li>
+	            <li><a href="3DANIMATE.html">3D Anlmate</a></li>
+	            <li><a href="contect.html">contact</a></li>
+	       </ul>
+	       <a href="javascript:void(0);" id="rightBtn">more</a>
+       </div>
+	</header>
+	<div class="contenter">		
+		<h2 class="lp">OUR SERVICE</h2>			
+		<div class="movie">
+			<img src="3DANIMATE/banner.png"  class="banner">
+			<a href="###">
+				<img src="3DANIMATE/fa-play.png" class="play">	
+			</a>
+		</div>
+		<div class="picp1">
+			<img src="3DANIMATE/quxian1.png">
+
+			<div class="txt">
+				<h1>3D ANIMATE</h1>
+				<p>Nosape eaqui non nobitati te ommos deria nos quatur? Pario comnit reris aut modic tecuptat omni ad explanditam verupis nia sequist la et liquo omnia 
+				</p>
+			</div>
+		</div>
+		<div class="picp1 picp2">						
+			<div class="txt">
+				<h1>3D ANIMATE</h1>
+				<p>Nosape eaqui non nobitati te ommos deria nos quatur? Pario comnit reris aut modic tecuptat omni ad explanditam verupis nia sequist la et liquo omnia 
+				</p>
+			</div>
+			
+			<img src="3DANIMATE/quxian2.png" class="list2">
+		</div>
+		<div class="picp1">
+			<img src="3DANIMATE/quxian3.png" class="list3">
+			<div class="txt">
+				<h1>3D ANIMATE</h1>
+				<p>Nosape eaqui non nobitati te ommos deria nos quatur? Pario comnit reris aut modic tecuptat omni ad explanditam verupis nia sequist la et liquo omnia 
+				</p>
+			</div>
+		</div>
+		<div class="picp1 picp2">						
+			<div class="txt">
+				<h1>3D ANIMATE</h1>
+				<p>Nosape eaqui non nobitati te ommos deria nos quatur? Pario comnit reris aut modic tecuptat omni ad explanditam verupis nia sequist la et liquo omnia 
+				</p>
+			</div>
+			
+			<img src="3DANIMATE/quxian4.png">
+		</div>
+		<div class="picp1">
+
+			<img src="3DANIMATE/quxian5.png">
+			<div class="txt">
+				<h1>3D ANIMATE</h1>
+				<p>Nosape eaqui non nobitati te ommos deria nos quatur? Pario comnit reris aut modic tecuptat omni ad explanditam verupis nia sequist la et liquo omnia 
+				</p>
+			</div>
+		</div>
+		<div class="toTop">
+			<a href="####" >
+				<img src="3DANIMATE/toTop.png">
+			</a>
+		</div>
+	</div>
+	<footer>
+		<h2 class="lp">CONTACT US</h2>
+		<div class="information">
+			<p>Email:enc@shnng365.com</p>
+			<p>Mobile Phone:86 138 1690 3400</p>
+			<p>Tel:+86 21 6598 6866-304  +86 21 6598 3188-304</p>
+		</div>
+		<div class="over">
+			<p>Copyright © 1998-2015 shining Group</p>
+		</div>
+	</footer>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+			var list =$("#navbar li")
+			for (var i = 0; i < list.length; i++) {
+															
+			list.eq(i).on("mouseover",function(){
+			$(this).toggleClass("active").siblings().removeClass("active")
+			// alert("aaaaaa")
+		})
+		}
+		
+ });
+
+	$(".toTop").on("click",function(){
+		$("html,body").animate({
+			scrollTop:0
+		})
+	})
+		// var pic = $(".picp1 img")
+		// var color = ["3DANIMATE/color1.png","3DANIMATE/color2.png","3DANIMATE/color3.png"]
+		// var color1 = ["3DANIMATE/gray1.png","3DANIMATE/gray2.png","3DANIMATE/gray3.png"]
+	
+		// pic.on("mouseenter",function(){
+		// 	var index = $(this).index(".picp1 img");
+		// 	$(this).attr("src",color[index]);
+		// })
+		// pic.on("mouseleave",function(){
+		// 	var index = $(this).index(".picp1 img");
+		// 	$(this).attr("src",color1[index]);
+		// })
+</script>
+</body>
+</html>

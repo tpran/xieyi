@@ -1,0 +1,77 @@
+#main>.title {
+	margin-top:8%;
+	margin-bottom: 6%;
+}
+.part {
+	position: relative;
+	overflow: hidden;
+}
+.part-1,.part-3,.part-5 {
+	background-color: #e4e4e4;
+}
+.part-2,.part-4 {
+	background-color: #fff;
+}
+.part .content-box {
+	/*height: 400px;*/
+	position: relative;
+	max-width: 1024px;
+	margin:0 auto;
+	z-index: 1;
+}
+.content-box>div{
+	width:48%;
+}
+.part-1 .bg,.part-3 .bg,.part-4 .bg1 {
+	position: absolute;
+	left:0;
+	bottom:0;
+	z-index: -1;
+}
+.part-3 .content-box>div,.part-4 .content-box>div{
+	margin-left: 58%;
+}
+.part-2 .bg,.part-5 .bg,.part-4 .bg {
+	position: absolute;
+	top:0;
+	left:0;
+	z-index: -1;
+}
+.part h3 {
+	color:#616161;
+	font-size: 2rem;
+	background-color: #cfdb00;
+	font-weight: bold;
+}
+.content-box p {
+	color: #1a1a1a;
+	font-size: 1.8rem;
+}
+.part-1 .content-box>div {
+	margin-left: 8%;
+	padding-top: 16%;
+}
+.part-2 .content-box>div {
+	margin-left: 4%;
+	padding-top: 12%;
+}
+.part-3 .content-box>div {
+	margin-left: 42%;
+	padding-top: 12%;
+}
+.part-4 .content-box>div {
+	margin-left: 32%;
+	padding-top: 12%;
+	width:36%;
+}
+.part-5 .content-box>div {
+	margin-left: 4%;
+	padding-top: 12%;
+}
+@media screen and (max-width: 768px) {
+	.part .content-box>div {
+		width:90%;
+		margin-left: 5%;
+		padding-top: 20%;
+	}
+}
