@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Drawing</title>
+<style type="text/css">
+.contenter {
+    width: 100%;
+    padding-top: 50px;
+    background-color: #f5f5f5;
+}
+.contenter h2.lp {       
+        width:375px;        
+    }
+    .autoplay {
+        width: 100%;
+    }
+    .autoplay img {
+        width: 100%;
+    }
+        #wrap {
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+            margin-top: 100px;
+        }
+        #wrap li {
+            float:left;
+            width: 250px;
+            font-size: 48px;
+            margin: 0 20px;
+            text-align: center;
+            list-style-type: none;
+
+        }
+        #wrap li div {
+            margin-bottom: 20px;
+            border:1px solid red;
+            background-color: #ccc;
+        }
+        .toTop {
+            width: 100%;
+           /* text-align: center;*/
+            margin-top:50px;
+        }
+       .toTop img {
+        margin: 0 auto;
+       }
+ 
+</style>
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/public1.css">
+	<!-- <link rel="stylesheet" type="text/css" href="css/renderings.css"> -->
+	
+</head>
+<body>
+	<header>
+        <div class="nav">
+          <a href="#" class="logo"><img src="3DANIMATE/logo.png"></a>
+          <ul id="navbar" class="clearfix">
+                <li><a href="SHNNG1.html">Home</a></li>
+                <li><a href="about us.html">ABOUT</a></li>
+                <li><a href="Drawing.html">Renderings</a></li>
+                <li><a href="bim.html">BIM</a></li>
+                <li><a href="3DANIMATE.html">3D Anlmate</a></li>
+                <li><a href="contect.html">contact</a></li>
+           </ul>
+           <a href="javascript:void(0);" id="rightBtn">more</a>
+       </div>
+    </header>
+
+<div class="contenter">        
+        <h2 class="lp">DIGITAL EFFECT DRAWING</h2>
+        <div class="autoplay">
+            <div class="swiper-wrapper">
+                <img src="pubuliu/p0.png">
+            </div>
+            <div class="swiper-wrapper">
+                <img src="pubuliu/p0.png">
+            </div>
+            <div class="swiper-wrapper">
+                <img src="pubuliu/p0.png">
+            </div>
+        </div>            
+        <div class="pubuliu">
+           
+            <img data-src="http://img2.3lian.com/2014/f7/5/d/22.jpg">
+            <img src="" alt="" data-src="pubuliu/p1.jpg">
+            <img src="" alt="" data-src="pubuliu/p2.jpg">
+            <img src="" alt="" data-src="pubuliu/p3.jpg">
+            <img src="" alt="" data-src="pubuliu/p4.jpg">
+            <img src="" alt="" data-src="pubuliu/p5.jpg">
+            <img src="" alt="" data-src="pubuliu/p6.jpg">
+            <img src="" alt="" data-src="pubuliu/p7.jpg">
+            <img src="" alt="" data-src="pubuliu/p8.jpg">
+            <img src="" alt="" data-src="pubuliu/p9.jpg">
+            <!-- <img src="pubuliu/p0.png">
+            <img alt="" src="pubuliu/p1.jpg">
+            <img alt="" src="pubuliu/p2.jpg">
+            <img alt="" src="pubuliu/p3.jpg">
+            <img alt="" src="pubuliu/p4.jpg">
+            <img alt="" src="pubuliu/p5.jpg">
+            <img alt="" src="pubuliu/p6.jpg">
+            <img alt="" src="pubuliu/p7.jpg">
+            <img alt="" src="pubuliu/p8.jpg">
+            <img alt="" src="pubuliu/p9.jpg"> -->
+            <ul id="wrap">
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="toTop">
+            <a href="####" >
+                <img src="3DANIMATE/toTop.png">
+            </a>
+        </div>
+ </div> 
+ <footer>
+        <div class="tl2">
+            <div class="line"></div>
+            <div class="lp">CONTACT US</div>
+            <div class="line"></div>
+        </div>
+        <div class="information">
+            <p>Email:enc@shnng365.com</p>
+            <p>Mobile Phone:86 138 1690 3400</p>
+            <p>Tel:+86 21 6598 6866-304  +86 21 6598 3188-304</p>
+        </div>
+        <div class="over">
+            <p>Copyright © 1998-2015 shining Group</p>
+        </div>
+    </footer> 
+ <script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+            var list =$("#navbar li")
+            for (var i = 0; i < list.length; i++) {
+                                                            
+            list.eq(i).on("mouseover",function(){
+            $(this).toggleClass("active").siblings().removeClass("active")
+        })
+        }        
+ });
+
+
+
+
+    var wrap = document.getElementById("wrap");
+        var list = document.getElementsByTagName("li");
+        function rnd(min,max) {
+            
+            return parseInt(Math.random()*(max -min +1))+ min;
+        }
+
+
+        function getPosition(element) {
+            var origin = element.offsetParent;
+            var x = element.offsetLeft;
+            var y = element .offsetTop;
+            while (origin) {
+                x = origin.clientLeft + x + origin.offsetLeft;
+                y = origin.clientTop + y + origin.offsetTop;
+                origin = origin.offsetParent;
+            }
+            return {x:x,y:y}
+        }
+        function createDiv() {
+            for (var j = 0; j < 10; j++) {          
+                var minList = list[0];
+                for (var i = 0; i < list.length; i++) {
+                    if (minList.offsetHeight > list[i].offsetHeight) {
+                        minList = list[i];
+                    }
+                }
+                var newDiv = document.createElement("div");
+                newDiv.style.height = rnd(100,200) + "px";
+                // newDiv.innerHTML = j;
+                minList.appendChild(newDiv);
+            }
+
+            }
+        createDiv();
+        window.onscroll = function() {
+            var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+            if(getPosition(wrap).y + wrap.offsetHeight <= scrollTop + document.documentElement.clientHeight) {
+        
+            createDiv();
+        }
+    }
+    $(".toTop").on("click",function(){
+        $("html,body").animate({
+            scrollTop:0
+        })
+    })
+</script>
+</body>
+</html>
