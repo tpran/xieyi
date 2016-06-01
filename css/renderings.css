@@ -1,0 +1,100 @@
+@charset "utf8";
+.contenter {
+    width: 100%;
+    padding-top: 50px;
+    background-color: #f5f5f5;
+}
+.contenter h2.lp {       
+        width:375px;        
+    }
+
+        .toTop {
+            width: 100%;
+            margin-top:50px;
+        }
+       .toTop img {
+        margin: 0 auto;
+       }
+.swiper-slide {
+  width: 100%;
+}
+.swiper-slide img {
+  width: 100%;
+}
+/**************** 轮播图 being*******************/
+.pagination {
+  position: absolute;
+  left: 0;
+  text-align: center;
+  bottom:5px;
+  width: 100%;
+}
+.swiper-pagination-switch {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background: #999;
+  box-shadow: 0px 1px 2px #555 inset;
+  margin: 0 3px;
+  cursor: pointer;
+}
+.swiper-active-switch {
+  background: #cfdb00;
+}
+
+/**************** 瀑布流 being*******************/
+#waterFall {
+  width:96%;
+  margin:5% auto;
+}
+#pubuliu li{
+  float: left;
+  width:32%;
+}
+#pubuliu li:nth-child(2) {
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+#pubuliu li>div {
+  position: relative;
+  margin-bottom: 8%;
+}
+#pubuliu li>div img {
+  width: 100%;
+}
+#pubuliu li>div:hover .mask {
+  opacity: 1;
+}
+#pubuliu li .mask {
+  position: absolute;
+  opacity: 0;
+  left:10%;
+  top:10%;
+  width:80%;
+  height: 80%;
+  background-color: rgba(207,219,0,0.6);
+  color:#fff;
+  font-size: 1.8rem;
+  transition:opacity 0.6s;
+}
+#pubuliu li .mask span {
+  width:80%;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  background: url("../img/icon-scale.png") no-repeat;
+  padding-top: 36px;
+  background-position: center top;
+}
+#pubuliu li .mask:after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+
+
+/**************** 瀑布流 end*******************/
