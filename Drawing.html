@@ -3,55 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<title>Drawing</title>
-<style type="text/css">
-.contenter {
-    width: 100%;
-    padding-top: 50px;
-    background-color: #f5f5f5;
-}
-.contenter h2.lp {       
-        width:375px;        
-    }
-    .autoplay {
-        width: 100%;
-    }
-    .autoplay img {
-        width: 100%;
-    }
-        #wrap {
-            width: 80%;
-            margin: 0 auto;
-            overflow: hidden;
-            margin-top: 100px;
-        }
-        #wrap li {
-            float:left;
-            width: 250px;
-            font-size: 48px;
-            margin: 0 20px;
-            text-align: center;
-            list-style-type: none;
-
-        }
-        #wrap li div {
-            margin-bottom: 20px;
-            border:1px solid red;
-            background-color: #ccc;
-        }
-        .toTop {
-            width: 100%;
-           /* text-align: center;*/
-            margin-top:50px;
-        }
-       .toTop img {
-        margin: 0 auto;
-       }
- 
-</style>
+	<title>Renderings</title>
     <link rel="stylesheet" type="text/css" href="css/base.css">
 	<link rel="stylesheet" type="text/css" href="css/public1.css">
-	<!-- <link rel="stylesheet" type="text/css" href="css/renderings.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/idangerous.swiper.css">
+	<link rel="stylesheet" type="text/css" href="css/renderings.css">
 	
 </head>
 <body>
@@ -72,45 +28,25 @@
 
 <div class="contenter">        
         <h2 class="lp">DIGITAL EFFECT DRAWING</h2>
-        <div class="autoplay">
+        <div class="swiper-container">
             <div class="swiper-wrapper">
-                <img src="pubuliu/p0.png">
+                <div class="swiper-slide">
+                    <img src="img/swiper.jpg">
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/swiper.jpg">
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/swiper.jpg">
+                </div>
             </div>
-            <div class="swiper-wrapper">
-                <img src="pubuliu/p0.png">
-            </div>
-            <div class="swiper-wrapper">
-                <img src="pubuliu/p0.png">
-            </div>
-        </div>            
-        <div class="pubuliu">
-           
-            <img data-src="http://img2.3lian.com/2014/f7/5/d/22.jpg">
-            <img src="" alt="" data-src="pubuliu/p1.jpg">
-            <img src="" alt="" data-src="pubuliu/p2.jpg">
-            <img src="" alt="" data-src="pubuliu/p3.jpg">
-            <img src="" alt="" data-src="pubuliu/p4.jpg">
-            <img src="" alt="" data-src="pubuliu/p5.jpg">
-            <img src="" alt="" data-src="pubuliu/p6.jpg">
-            <img src="" alt="" data-src="pubuliu/p7.jpg">
-            <img src="" alt="" data-src="pubuliu/p8.jpg">
-            <img src="" alt="" data-src="pubuliu/p9.jpg">
-            <!-- <img src="pubuliu/p0.png">
-            <img alt="" src="pubuliu/p1.jpg">
-            <img alt="" src="pubuliu/p2.jpg">
-            <img alt="" src="pubuliu/p3.jpg">
-            <img alt="" src="pubuliu/p4.jpg">
-            <img alt="" src="pubuliu/p5.jpg">
-            <img alt="" src="pubuliu/p6.jpg">
-            <img alt="" src="pubuliu/p7.jpg">
-            <img alt="" src="pubuliu/p8.jpg">
-            <img alt="" src="pubuliu/p9.jpg"> -->
-            <ul id="wrap">
+            <div class="pagination"></div>
+        </div>      
+        <ul id="pubuliu" class="clearfix">
                 <li></li>
                 <li></li>
                 <li></li>
-            </ul>
-        </div>
+        </ul>
         <div class="toTop">
             <a href="####" >
                 <img src="3DANIMATE/toTop.png">
@@ -133,6 +69,7 @@
         </div>
     </footer> 
  <script type="text/javascript" src="js/jquery.min.js"></script>
+ <script type="text/javascript" src="js/idangerous.swiper.min.js"></script>
 <script type="text/javascript">
 $(function(){
             var list =$("#navbar li")
@@ -143,52 +80,87 @@ $(function(){
         })
         }        
  });
+//轮播图
+var myswiper = new Swiper(".swiper-container",{
+        autoplay:5000,
+        speed:600,
+        loop:true,
+        pagination:".pagination",
+        calculateHeight: true, 
+        paginationClickable:true
+    });
+var wtData = [{
+        "src":"img/p1.jpg",
+        "title":"标题111"
+    },{
+        "src":"img/p2.jpg",
+        "title":"标题222"
+    },{
+        "src":"img/p3.jpg",
+        "title":"标题333"
+    },{
+        "src":"img/p4.jpg",
+        "title":"标题444"
+    },{
+        "src":"img/p5.jpg",
+        "title":"标题555"
+    },{
+        "src":"img/p6.jpg",
+        "title":"标题666"
+    },{
+        "src":"img/p7.jpg",
+        "title":"标题777"
+    },{
+        "src":"img/p8.jpg",
+        "title":"标题888"
+    },{
+        "src":"img/p9.jpg",
+        "title":"标题999"
+    }];
 
-
-
-
-    var wrap = document.getElementById("wrap");
-        var list = document.getElementsByTagName("li");
-        function rnd(min,max) {
-            
-            return parseInt(Math.random()*(max -min +1))+ min;
+    //图片预加载
+    var beginNum = 0;
+    for(var k = 0,len = wtData.length; k < len; k++) {
+        var img = new Image();
+        img.src = wtData[k].src;
+        img.onload = function() {
+            beginNum++;
+            if(beginNum == len) {
+                waterfall();
+            }
         }
-
-
-        function getPosition(element) {
-            var origin = element.offsetParent;
-            var x = element.offsetLeft;
-            var y = element .offsetTop;
-            while (origin) {
-                x = origin.clientLeft + x + origin.offsetLeft;
-                y = origin.clientTop + y + origin.offsetTop;
-                origin = origin.offsetParent;
-            }
-            return {x:x,y:y}
-        }
-        function createDiv() {
-            for (var j = 0; j < 10; j++) {          
-                var minList = list[0];
-                for (var i = 0; i < list.length; i++) {
-                    if (minList.offsetHeight > list[i].offsetHeight) {
-                        minList = list[i];
-                    }
-                }
-                var newDiv = document.createElement("div");
-                newDiv.style.height = rnd(100,200) + "px";
-                // newDiv.innerHTML = j;
-                minList.appendChild(newDiv);
-            }
-
-            }
-        createDiv();
-        window.onscroll = function() {
-            var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
-            if(getPosition(wrap).y + wrap.offsetHeight <= scrollTop + document.documentElement.clientHeight) {
         
-            createDiv();
+    }
+
+    function waterfall() {
+        start++;
+        for(var j = 0; j < wtData.length; j++) {
+            var newBlock = $("<div></div>");
+            var newBlockContent = '<img src="'+wtData[j].src+'">'+
+                                    '<p class="mask">'+
+                                        '<span>'+wtData[j].title+'</span>'+
+                                    '</p>';
+            newBlock.html(newBlockContent);
+            var minList = $("#pubuliu li").eq(0);
+            for(var i = 0,len = $("#pubuliu li").length;i < len; i++ ) {
+                if(minList.height() > $("#pubuliu li").eq(i).height() ) {
+                    minList = $("#pubuliu li").eq(i);
+                }
+            }
+            minList.append(newBlock);
         }
     }
+
+
+    var total = 3;
+    var start = 0;
+    $(window).on("scroll",function() {
+        if($("footer").offset().top < $(document).scrollTop() + $(window).height()) {
+            if(start == total) return;
+            waterfall();
+        }
+    })
+   
     $(".toTop").on("click",function(){
         $("html,body").animate({
             scrollTop:0
